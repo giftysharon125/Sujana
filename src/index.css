@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FAF5FF;
+    color: #4A4063;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+.font-rounded {
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3E8FF;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8B4FE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C084FC;
+}
+
+/* Scrapbook & Polaroid Styles */
+.polaroid-shadow {
+  box-shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+}
+
+.tape-sticker {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 90px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  border: 1px dashed rgba(216, 180, 254, 0.8);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(243, 232, 255, 0.8);
+  box-shadow: 0 12px 32px 0 rgba(192, 132, 252, 0.12);
+}
+
+.glass-card-dark {
+  background: rgba(30, 27, 54, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 180, 254, 0.25);
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.4);
+}
+
+.lined-paper {
+  background-color: #FFFDF7;
+  background-image: linear-gradient(#E9D5FF 1px, transparent 1px);
+  background-size: 100% 28px;
+  line-height: 28px;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
